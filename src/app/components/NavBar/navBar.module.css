@@ -1,0 +1,39 @@
+.navBar {
+  position: sticky;
+  height: 4vw;
+  width: 70vw;
+  margin-top: 2vw;
+  background-color: #bda59b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1vw;
+}
+
+.brandName {
+  position: relative;
+  margin-left: 1.5vw;
+  color: white;
+  font-weight: 800;
+}
+.hamBtn {
+  position: relative;
+  margin-right: 0.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3vw;
+  height: 3vw;
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 0.5vw;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+.hamBtn:hover {
+    background-color: rgb(255, 255, 255);
+}
+.hamIcon {
+  position: relative;
+  width: 2vw;
+  height: auto;
+}
