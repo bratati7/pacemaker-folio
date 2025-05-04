@@ -1,6 +1,7 @@
 "use client";
 import { Canvas } from "@react-three/fiber";
 import Image from "next/image";
+import Link from "next/link";
 import Styles from "./page.module.css";
 import { Float, OrbitControls, Environment } from "@react-three/drei";
 import { Heart } from "./components/Heart/Heart";
@@ -14,6 +15,7 @@ import PacemakerComponentsImage from "../../public/GetImage (41).png";
 import PieChartManufacturerData from "../../public/pacemaker_market_share_nude_pie_chart.png";
 import AdvancementsPacemaker from "../../public/CVTeam_MicraWGlove.jpg";
 import RisksImage from "../../public/HeartDiseases_share.jpg";
+import Footer from "./components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -116,7 +118,9 @@ export default function Home() {
               evolved into compact, intelligent devices that can adapt to a
               patient`s needs.
             </p>
-            <button className={Styles.learnMoreBtn}>Learn More</button>
+            <Link href="/history">
+              <button className={Styles.learnMoreBtn}>Learn More</button>
+            </Link>
           </div>
         </div>
         <div className={Styles.leftAlignDiv}>
@@ -135,7 +139,9 @@ export default function Home() {
               3. Biventricular pacemaker (CRT device): Used for heart failure
               patients; stimulates both ventricles to improve coordination.
             </p>
-            <button className={Styles.learnMoreBtn}>Learn More</button>
+            <Link href="/types">
+              <button className={Styles.learnMoreBtn}>Learn More</button>
+            </Link>
           </div>
           <div className={Styles.correspondingPhoto}>
             <Image
@@ -168,7 +174,9 @@ export default function Home() {
               heart to beat at a normal rate. The pacemaker adjusts pacing based
               on activity levels, using built-in sensors.
             </p>
-            <button className={Styles.learnMoreBtn}>Learn More</button>
+            <Link href="/principle">
+              <button className={Styles.learnMoreBtn}>Learn More</button>
+            </Link>
           </div>
         </div>
         <div className={Styles.leftAlignDiv}>
@@ -187,7 +195,9 @@ export default function Home() {
               for clinical analysis.
             </p>
             <p>4. Encasing: Typically titanium, biocompatible and durable.</p>
-            <button className={Styles.learnMoreBtn}>Learn More</button>
+            <Link href="/key-components">
+              <button className={Styles.learnMoreBtn}>Learn More</button>
+            </Link>
           </div>
 
           <div className={Styles.correspondingPhoto}>
@@ -214,33 +224,44 @@ export default function Home() {
           </div>
           <div className={Styles.textData}>
             <h3>Leading Manufacturers</h3>
+            <p>Major players in the cardiac pacemaker industry include:</p>
+            <p>1. Medtronic</p>
+            <p>2. Abbott Laboratories</p>
+            <p>3. Boston Scientific</p>
+            <p>4. Biotronik</p>
+            <p>5. MicroPort</p>
             <p>
-              A cardiac pacemaker monitors the heart’s rhythm through leads
-              placed in the heart chambers. When it detects a rhythm that’s too
-              slow or irregular, it sends electrical impulses to prompt the
-              heart to beat at a normal rate. The pacemaker adjusts pacing based
-              on activity levels, using built-in sensors.
+              These five companies account for over 85% of the global pacemaker
+              market.
             </p>
-            <button className={Styles.learnMoreBtn}>Learn More</button>
+            <Link href="/leading-manufacturers">
+              <button className={Styles.learnMoreBtn}>Learn More</button>
+            </Link>
           </div>
         </div>
         <div className={Styles.leftAlignDiv}>
           <div className={Styles.textData}>
             <h3>Recent Advancements</h3>
             <p>
-              1. Pulse Generator: Contains the battery and the circuitry that
-              generates electrical impulses.
+              <strong>Leadless pacemakers</strong> like the Medtronic Micra
+              eliminate the need for leads.
             </p>
             <p>
-              2. Leads (Electrodes): Wires that deliver impulses to the heart
-              and send information back to the generator.
+              <strong>MRI-compatible devices</strong> allow patients to safely
+              undergo scans.
             </p>
             <p>
-              3. Software/Firmware: Controls pacing parameters and records data
-              for clinical analysis.
+              <strong>Bluetooth-enabled pacemakers</strong> offer remote
+              monitoring and diagnosis.
             </p>
-            <p>4. Encasing: Typically titanium, biocompatible and durable.</p>
-            <button className={Styles.learnMoreBtn}>Learn More</button>
+            <p>
+              <strong>Rechargeable batteries</strong> and{" "}
+              <strong>longer battery life</strong> reduce the need for
+              replacements.
+            </p>
+            <Link href="/recent-advancements">
+              <button className={Styles.learnMoreBtn}>Learn More</button>
+            </Link>
           </div>
 
           <div className={Styles.correspondingPhoto}>
@@ -267,17 +288,19 @@ export default function Home() {
           </div>
           <div className={Styles.textData}>
             <h3>Risks & Complications</h3>
-            <p>
-              A cardiac pacemaker monitors the heart’s rhythm through leads
-              placed in the heart chambers. When it detects a rhythm that’s too
-              slow or irregular, it sends electrical impulses to prompt the
-              heart to beat at a normal rate. The pacemaker adjusts pacing based
-              on activity levels, using built-in sensors.
-            </p>
-            <button className={Styles.learnMoreBtn}>Learn More</button>
+            <p>While generally safe, pacemaker implantation may involve:</p>
+            <p>1. Infection at the implant site</p>
+            <p>2. Lead dislodgement or malfunction</p>
+            <p>3. Battery failure</p>
+            <p>4. Allergic reaction to anesthesia</p>
+            <p>5. Rarely, damage to blood vessels or heart tissue</p>
+            <Link href="/risks">
+              <button className={Styles.learnMoreBtn}>Learn More</button>
+            </Link>
           </div>
         </div>
         {/*----------------------*/}
+        <Footer />
       </div>
     </div>
   );
